@@ -1,0 +1,242 @@
+a {
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: unset;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 6px 10px 0 rgba(95, 101, 105, 0.15);
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      align-items: center;
+      .logo {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url(./assets/images/logo.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 23px;
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.main-container {
+  display: flex;
+
+  // 网页侧边菜单栏样式
+  .side-menu {
+    margin-top: 10px;
+    width: 200px;
+    min-width: 200px;
+    margin-right: 10px;
+    border-radius: 8px;
+    height: 100vh;
+  }
+
+  // 页面内容样式
+  .page-container {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    flex: 1;
+    background-color: white;
+    height: 100%;
+    min-height: 100vh;
+    .books-page {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .book-price {
+      color: red;
+      font-size: 16px;
+    }
+  }
+}
+
+.book-details-box {
+  display: grid;
+  grid-template-areas:
+    "cover body"
+    "cover offers"
+    "cover tabs"
+    "staff-picks staff-picks";
+  grid-template-columns: min-content auto;
+  // column-gap: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  .book-cover {
+    grid-area: cover;
+    display: flex;
+    flex-direction: column;
+    max-height: 30rem;
+    max-width: fit-content;
+  }
+  .details-wrap {
+    .book-authors {
+      font-size: 1.2rem;
+      font-weight: normal;
+      line-height: 2rem;
+    }
+    .book-rating {
+      margin-top: 1rem;
+    }
+    .book-desc {
+      margin-top: 1rem;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: italic;
+      color: grey;
+      margin-bottom: 2rem;
+    }
+    .book-details {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: grid;
+      grid-template-columns: max-content auto;
+      grid-column-gap: 4rem;
+      grid-row-gap: 1rem;
+      grid-area: attributes_details;
+      border-top: 1px solid #ddd;
+      .detail-key {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// 书籍卡片样式
+.book-card {
+  overflow: hidden;
+  min-width: 200px;
+  min-height: 300px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 6px 10px 0 rgba(95, 101, 105, 0.15);
+  transition: all 0.25s;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-8px);
+  }
+  .ant-card-body {
+    padding: 0 20px 0 20px;
+  }
+}
+
+.w {
+  width: 1000px;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+.spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-intro {
+  font-size: 28px;
+  margin-bottom: 2rem;
+}
+
+.badge-button {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+  background-color: #25b99a;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.25s;
+  &:hover {
+    filter: brightness(1.1);
+  }
+  &::before {
+    content: attr(data-count);
+    position: absolute;
+    top: -0.75em;
+    right: -0.75em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+  }
+}
+.profile-page {
+  .input-section {
+    margin-bottom: 2rem;
+    .title {
+      margin-bottom: 1rem;
+    }
+    .input-group {
+      display: flex;
+      input {
+        margin-right: 1rem;
+      }
+    }
+  }
+  .info-section {
+    display: flex;
+    margin-bottom: 3rem;
+    .avatar-section {
+      margin-right: 2rem;
+      .title {
+        margin-bottom: 2rem;
+      }
+      .avatar-wrap {
+        img {
+          margin-bottom: 1rem;
+          display: block;
+        }
+      }
+    }
+    .notes-section {
+      display: flex;
+      flex-direction: column;
+      align-content: stretch;
+    }
+  }
+}
