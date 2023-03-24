@@ -1,4 +1,5 @@
 import { Avatar, Layout } from 'antd'
+import avatar from '../assets/images/tomcat.jpg'
 
 const { Header } = Layout
 
@@ -16,7 +17,7 @@ export const AppHeader = () => {
         </div>
         <div className='right'>
           <span className='title'>Hi, Tom</span>
-          <Avatar src='../../src/assets/images/tomcat.jpg' />
+          <Avatar src={avatar} />
         </div>
       </div>
     </Header>

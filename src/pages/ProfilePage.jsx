@@ -2,6 +2,7 @@ import { Input } from 'antd'
 import { PageIntro } from '../components/PageIntro'
 import { UploadOutlined } from '@ant-design/icons'
 import { Button, Upload } from 'antd'
+import avatar from '../assets/images/tomcat.jpg'
 
 const { TextArea } = Input
 
@@ -28,8 +29,7 @@ export const ProfilePage = () => {
           <div className='avatar-wrap'>
             <img
               width={200}
-              src='../../src/assets/images/tomcat.jpg'
-              alt=''
+              src={avatar}
             />
             <Upload>
               <Button icon={<UploadOutlined />}>点击上传头像</Button>

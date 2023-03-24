@@ -4,7 +4,6 @@ import { BookCard } from '../components/BookCard'
 import { Error } from '../components/Error'
 import { PreLoader } from '../components/PreLoader'
 import { NEW_BOOKS_API } from '../constants'
-import { AppCarousel } from './AppCarousel'
 
 export const BooksPage = () => {
   // useSWR 是一个用于网络请求的库
