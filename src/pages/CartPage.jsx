@@ -37,12 +37,9 @@ export const CartPage = () => {
       title: '价格',
       dataIndex: 'price',
       key: 'price',
-      render: (_) => {
-        const price = items.reduce(
-          (acc, item) => acc + item.price.replace('$', '') * item.count,
-          0,
-        )
-        return `\$${price}`
+      render: (_, record) => {
+        const price = +record.price.replace('$', '') * record.amount
+        return `\$${price.toFixed(2)}`
       },
     },
     {

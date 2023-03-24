@@ -23,10 +23,6 @@ export const useStore = create((set, get) => ({
     })
   },
 
-  // 书籍递增
-
-  // 书籍递减
-
   // 删除书籍
   removeById: (id) => {
     set((state) => ({
