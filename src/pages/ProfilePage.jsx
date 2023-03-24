@@ -45,6 +45,11 @@ export const ProfilePage = () => {
           />
         </div>
       </div>
+      <Button
+        type='primary'
+        block>
+        保存
+      </Button>
     </div>
   )
 }
